@@ -23,6 +23,8 @@ app.use(
 app.get('/', (req, res) => {
   res.send('API is running 🚀');
 });
+app.set('trust proxy', 1); // Trust the first proxy
+
 
 // MongoDB connection
 const con = require("./db/connection");
