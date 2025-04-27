@@ -20,6 +20,9 @@ app.use(
     message: "Too many requests from this IP, please try again later.",
   })
 );
+app.get('/', (req, res) => {
+  res.send('API is running 🚀');
+});
 
 // MongoDB connection
 const con = require("./db/connection");
